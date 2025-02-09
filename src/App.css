@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+@import "@fontsource/jetbrains-mono";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  --black: #1e1e1e; /* Dark background color */
+  --white: #fffdfd;
+  --light: #f1f1f1; /* Light text color */
+  --purple-light: #e2bcf1; /* Light purple color */
+  --gray-1: #cccccc; /* Lighter gray */
+  --gray-2: #666666; /* Darker gray */
+}
+
+/* Reset styles */
+button {
+  background-color: transparent;
+}
+
+.App {
+  font-family: Poppins, sans-serif;
+  border-radius: 5px;
+  border: 2px solid var(--gray-1);
+}
+.ProseMirror {
+  padding: 10px;
+  border-top: 1px solid var(--gray-2);
+  background-color: var(--white);
+  border-radius: 0 0 5px 5px;
+  min-height: 300px;
+}
+
+.ProseMirror > * + * {
+  margin-top: 0.75rem;
+}
+
+.control-group {
+  padding: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button.is-active {
+  background-color: var(--purple-light);
+}
+
+/* Basic editor styles */
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+
+  /* List styles */
+  ul,
+  ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+
+    li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  /* Heading styles */
+  h1,
+  h2,
+  h3 {
+    line-height: 1.1;
+    margin-top: 2.5rem;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* Code and preformatted text styles */
+  code {
+    background-color: var(--black);
+    border-radius: 0.4rem;
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 0.25em 0.3em;
+  }
+
+  .saveButton {
+    color: red;
+    border: 1px solid var(--purple-light);
+  }
+
+  blockquote {
+    border-left: 3px solid var(--gray-1);
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+  }
+}
+
+/* Base Callout Styles */
+.callout {
+  background-color: #f7f7f7;
+  border-left: 5px solid #007bff;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.callout-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Content inside the callout */
+.callout-content {
+  flex: 1;
+}
+
+/* Callout Types */
+.callout.info {
+  border-color: blue;
+  background-color: lightblue;
+}
+
+.callout.warning {
+  border-color: orange;
+  background-color: lightyellow;
+}
