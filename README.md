@@ -34,9 +34,9 @@ Clone the repository:
 
 # bash
 
-git clone <https://github.com/shoghdev/react-tiptap-editor.git>
-cd <react-tiptap-editor>
-npm run dev
+- git clone <https://github.com/shoghdev/react-tiptap-editor.git>
+- cd "react-tiptap-editor"
+- npm run dev
 
 # Usage
 
